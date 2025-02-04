@@ -1,0 +1,62 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName=serviceName %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <h1 class="govuk-heading-xl">
+      'Get help to study' accessibility exercise instructions
+
+    </h1>
+
+
+<p class="govuk-body">'Get help to study' is a made-up government service, filled with accessibility issues. Your task is to find them all!
+
+  To help find the issues, you will need to use the WAVE accessibility plugin with either Chrome or Edge. You'll also need to try to complete the exercise using just your keyboard.</p>
+
+<div class="govuk-button-group">
+
+{{ govukButton({
+  text: "Start the excercise",
+  href: "/service/index"
+}) }}
+
+
+</div>
+
+{% endblock %}
+
+{% block footer %}
+
+
+{{ govukFooter({
+  meta: {
+    items: [
+    {
+      href: "/",
+      text: "Prototype home"
+    },
+      {
+        href: "/manage-prototype",
+        text: "Manage prototype"
+      },
+      {
+        href: "/manage-prototype/clear-data",
+        text: "Clear data"
+      },
+      {
+        href: "https://github.com/lori-t/get-help-to-study/",
+        text: "Source code on Github (opens in new tab)",
+        attributes: {
+          "target" : "_blank"
+        }
+      }
+    ]
+  }
+}) }}
+
+{% endblock %}

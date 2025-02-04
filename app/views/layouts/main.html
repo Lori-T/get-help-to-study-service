@@ -1,0 +1,24 @@
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+
+
+{% block header %}
+{{ govukHeader({
+  attributes: { "style" : "border-bottom-color:#d4351c" }  if (folder == "bad") ,
+  classes: "govuk-header--full-width-border"
+
+
+}) }}
+
+
+{{ govukServiceNavigation({
+  serviceName:  serviceName,
+  serviceUrl: "/"
+}) }}
+
+{% endblock %}
